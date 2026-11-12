@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "plugins": [
+    {
+      "id": "toonshift-power",
+      "title": "Electricity",
+      "description": "Live electricity demand from a local collector",
+      "source": "file"
+    },
+    {
+      "id": "toonshift-gas",
+      "title": "Gas usage",
+      "description": "Live gas usage from a local collector",
+      "source": "file"
+    },
+    {
+      "id": "toonshift-solar",
+      "title": "Solar output",
+      "description": "Live solar production from a local collector",
+      "source": "file"
+    },
+    {
+      "id": "toonshift-humidity",
+      "title": "Humidity",
+      "description": "Room humidity from a local collector",
+      "source": "file"
+    },
+    {
+      "id": "toonshift-weather",
+      "title": "Weather",
+      "description": "Outdoor conditions from a local collector",
+      "source": "file"
+    }
+  ]
+}
