@@ -1,0 +1,9 @@
+{
+  "id": "toonshift-room-temperature",
+  "title": "Room sensor",
+  "description": "Compensated room temperature from the Toon sensor",
+  "release": "1.0.0",
+  "source": "box_talk",
+  "metric": "room_temperature",
+  "title_nl": "Kamersensor"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "toonshift-export-day",
+  "title": "Grid export",
+  "description": "Recorded grid export over the last 24 hours",
+  "release": "1.0.0",
+  "source": "meter_archive",
+  "meter": "export",
+  "title_nl": "Teruglevering"
+}

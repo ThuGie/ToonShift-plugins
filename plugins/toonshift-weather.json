@@ -1,0 +1,132 @@
+{
+  "id": "toonshift-weather",
+  "title": "Weather",
+  "description": "Live outdoor conditions from Open-Meteo",
+  "source": "https_json",
+  "release": "1.1.0",
+  "feed": {
+    "url": "https://api.open-meteo.com/v1/forecast?latitude={latitude}&longitude={longitude}&current=temperature_2m,weather_code&daily=weather_code,temperature_2m_min,temperature_2m_max&timezone=auto&forecast_days=5",
+    "value": "/current/temperature_2m",
+    "suffix": "°C",
+    "condition": "/current/weather_code",
+    "labels": {
+      "0": "Clear",
+      "1": "Mainly clear",
+      "2": "Partly cloudy",
+      "3": "Overcast",
+      "45": "Fog",
+      "48": "Freezing fog",
+      "51": "Light drizzle",
+      "53": "Drizzle",
+      "55": "Heavy drizzle",
+      "56": "Freezing drizzle",
+      "57": "Freezing drizzle",
+      "61": "Light rain",
+      "63": "Rain",
+      "65": "Heavy rain",
+      "66": "Freezing rain",
+      "67": "Freezing rain",
+      "71": "Light snow",
+      "73": "Snow",
+      "75": "Heavy snow",
+      "77": "Snow grains",
+      "80": "Light showers",
+      "81": "Showers",
+      "82": "Heavy showers",
+      "85": "Snow showers",
+      "86": "Heavy snow showers",
+      "95": "Thunderstorm",
+      "96": "Thunderstorm with hail",
+      "99": "Thunderstorm with hail"
+    },
+    "places": [
+      {
+        "latitude": 52.37,
+        "longitude": 4.9,
+        "name": "Amsterdam"
+      },
+      {
+        "latitude": 51.92,
+        "longitude": 4.48,
+        "name": "Rotterdam"
+      },
+      {
+        "latitude": 52.09,
+        "longitude": 5.12,
+        "name": "Utrecht"
+      },
+      {
+        "latitude": 52.08,
+        "longitude": 4.31,
+        "name": "The Hague"
+      },
+      {
+        "latitude": 51.44,
+        "longitude": 5.48,
+        "name": "Eindhoven"
+      },
+      {
+        "latitude": 53.22,
+        "longitude": 6.57,
+        "name": "Groningen"
+      },
+      {
+        "latitude": 50.85,
+        "longitude": 5.69,
+        "name": "Maastricht"
+      },
+      {
+        "latitude": 51.84,
+        "longitude": 5.86,
+        "name": "Nijmegen"
+      }
+    ],
+    "series": {
+      "dates": "/daily/time",
+      "codes": "/daily/weather_code",
+      "max": "/daily/temperature_2m_max",
+      "min": "/daily/temperature_2m_min"
+    },
+    "labels_nl": {
+      "0": "Helder",
+      "1": "Meestal helder",
+      "2": "Halfbewolkt",
+      "3": "Bewolkt",
+      "45": "Mist",
+      "48": "Aanvriezende mist",
+      "51": "Lichte motregen",
+      "53": "Motregen",
+      "55": "Zware motregen",
+      "56": "Aanvriezende motregen",
+      "57": "Aanvriezende motregen",
+      "61": "Lichte regen",
+      "63": "Regen",
+      "65": "Zware regen",
+      "66": "IJzel",
+      "67": "IJzel",
+      "71": "Lichte sneeuw",
+      "73": "Sneeuw",
+      "75": "Zware sneeuw",
+      "77": "Motsneeuw",
+      "80": "Lichte buien",
+      "81": "Buien",
+      "82": "Zware buien",
+      "85": "Sneeuwbuien",
+      "95": "Onweer",
+      "96": "Onweer met hagel",
+      "99": "Onweer met hagel"
+    },
+    "search": {
+      "url": "https://geocoding-api.open-meteo.com/v1/search?name={query}&count=5&language={language}&format=json",
+      "results": "/results",
+      "name": "/name",
+      "latitude": "/latitude",
+      "longitude": "/longitude",
+      "region": [
+        "/admin1",
+        "/country"
+      ]
+    }
+  },
+  "title_nl": "Weer"
+}

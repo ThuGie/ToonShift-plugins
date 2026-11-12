@@ -5,123 +5,129 @@
       "id": "toonshift-power",
       "title": "Electricity",
       "description": "Live electricity from the Toon meter adapter",
-      "source": "box_talk",
-      "metric": "electricity",
-      "release": "1.0.0"
+      "release": "1.0.0",
+      "source": "file",
+      "artifact": {
+        "path": "plugins/toonshift-power.json",
+        "sha256": "44386051badb34aadb53f33d64b38fc171ada6a2f81aefb19f456c0a27dd08f8"
+      }
     },
     {
       "id": "toonshift-gas",
       "title": "Gas usage",
       "description": "Live gas flow from the Toon meter adapter",
-      "source": "box_talk",
-      "metric": "gas",
-      "release": "1.0.0"
+      "release": "1.0.0",
+      "source": "file",
+      "artifact": {
+        "path": "plugins/toonshift-gas.json",
+        "sha256": "6a9f084c736d88379c3a6f676a8f3a4011cac10427c93ace9ed40d9b8d6fc303"
+      }
     },
     {
       "id": "toonshift-solar",
       "title": "Solar output",
       "description": "Live solar production from a local collector",
+      "release": "1.0.0",
       "source": "file",
-      "release": "1.0.0"
+      "artifact": {
+        "path": "plugins/toonshift-solar.json",
+        "sha256": "83d79f17ecceffe301786f47cb61be0754cf4633e0e21d00062426cbc93255c0"
+      }
     },
     {
       "id": "toonshift-humidity",
       "title": "Humidity",
       "description": "Compensated room humidity from the thermostat",
-      "source": "box_talk",
-      "metric": "room_humidity",
-      "release": "1.0.0"
+      "release": "1.0.0",
+      "source": "file",
+      "artifact": {
+        "path": "plugins/toonshift-humidity.json",
+        "sha256": "bc23b2fb405ec2f53cf40d929d821d51c72d7f16d1d2860cc57bf6c3264b316a"
+      }
     },
     {
       "id": "toonshift-weather",
       "title": "Weather",
       "description": "Live outdoor conditions from Open-Meteo",
-      "source": "https_json",
+      "release": "1.1.0",
+      "source": "file",
+      "artifact": {
+        "path": "plugins/toonshift-weather.json",
+        "sha256": "f5561dac40412e82a933d270a2847e11eadf2c8c829647eb000d6954910bcd05"
+      },
+      "title_nl": "Weer"
+    },
+    {
+      "id": "toonshift-air-quality",
+      "title": "Outdoor air quality",
+      "description": "European air-quality index from Open-Meteo",
       "release": "1.0.0",
-      "feed": {
-        "url": "https://api.open-meteo.com/v1/forecast?latitude={latitude}&longitude={longitude}&current=temperature_2m,weather_code&daily=weather_code,temperature_2m_min,temperature_2m_max&timezone=auto&forecast_days=5",
-        "value": "/current/temperature_2m",
-        "suffix": "°C",
-        "condition": "/current/weather_code",
-        "labels": {
-          "0": "Clear",
-          "1": "Mainly clear",
-          "2": "Partly cloudy",
-          "3": "Overcast",
-          "45": "Fog",
-          "48": "Freezing fog",
-          "51": "Light drizzle",
-          "53": "Drizzle",
-          "55": "Heavy drizzle",
-          "56": "Freezing drizzle",
-          "57": "Freezing drizzle",
-          "61": "Light rain",
-          "63": "Rain",
-          "65": "Heavy rain",
-          "66": "Freezing rain",
-          "67": "Freezing rain",
-          "71": "Light snow",
-          "73": "Snow",
-          "75": "Heavy snow",
-          "77": "Snow grains",
-          "80": "Light showers",
-          "81": "Showers",
-          "82": "Heavy showers",
-          "85": "Snow showers",
-          "86": "Heavy snow showers",
-          "95": "Thunderstorm",
-          "96": "Thunderstorm with hail",
-          "99": "Thunderstorm with hail"
-        },
-        "places": [
-          {
-            "latitude": 52.37,
-            "longitude": 4.9,
-            "name": "Amsterdam"
-          },
-          {
-            "latitude": 51.92,
-            "longitude": 4.48,
-            "name": "Rotterdam"
-          },
-          {
-            "latitude": 52.09,
-            "longitude": 5.12,
-            "name": "Utrecht"
-          },
-          {
-            "latitude": 52.08,
-            "longitude": 4.31,
-            "name": "The Hague"
-          },
-          {
-            "latitude": 51.44,
-            "longitude": 5.48,
-            "name": "Eindhoven"
-          },
-          {
-            "latitude": 53.22,
-            "longitude": 6.57,
-            "name": "Groningen"
-          },
-          {
-            "latitude": 50.85,
-            "longitude": 5.69,
-            "name": "Maastricht"
-          },
-          {
-            "latitude": 51.84,
-            "longitude": 5.86,
-            "name": "Nijmegen"
-          }
-        ],
-        "forecast": {
-          "dates": "/daily/time",
-          "codes": "/daily/weather_code",
-          "max": "/daily/temperature_2m_max",
-          "min": "/daily/temperature_2m_min"
-        }
-      }
+      "source": "file",
+      "artifact": {
+        "path": "plugins/toonshift-air-quality.json",
+        "sha256": "fe7c2d675a5c116137d32739d5e2174b33fc7145fd20c481066202d9c888f0ec"
+      },
+      "title_nl": "Luchtkwaliteit buiten"
+    },
+    {
+      "id": "toonshift-wind",
+      "title": "Outdoor wind",
+      "description": "Current outdoor wind speed from Open-Meteo",
+      "release": "1.0.0",
+      "source": "file",
+      "artifact": {
+        "path": "plugins/toonshift-wind.json",
+        "sha256": "9170868ad5d47460bfd546b83f35e6cce274cce9b699108f6a2f7e063a8bc070"
+      },
+      "title_nl": "Wind buiten"
+    },
+    {
+      "id": "toonshift-room-temperature",
+      "title": "Room sensor",
+      "description": "Compensated room temperature from the Toon sensor",
+      "release": "1.0.0",
+      "source": "file",
+      "artifact": {
+        "path": "plugins/toonshift-room-temperature.json",
+        "sha256": "27371465ee42f55c9ecc1b26ff06036a142ed6dbcbfdb94aa14c5d6c1af6e186"
+      },
+      "title_nl": "Kamersensor"
+    },
+    {
+      "id": "toonshift-electricity-day",
+      "title": "Electricity in 24 hours",
+      "description": "Recorded electricity consumption over the last 24 hours",
+      "release": "1.0.0",
+      "source": "file",
+      "artifact": {
+        "path": "plugins/toonshift-electricity-day.json",
+        "sha256": "7fde8a575b7f9a0f2f35e24be06b36d12b42b7f17e01e6a32f4cace0f1af1780"
+      },
+      "title_nl": "Stroom in 24 uur"
+    },
+    {
+      "id": "toonshift-gas-day",
+      "title": "Gas in 24 hours",
+      "description": "Recorded gas consumption over the last 24 hours",
+      "release": "1.0.0",
+      "source": "file",
+      "artifact": {
+        "path": "plugins/toonshift-gas-day.json",
+        "sha256": "7dee56d5a6e5c21c62bc29e907be740716e42052bb47421f072da2a25469161e"
+      },
+      "title_nl": "Gas in 24 uur"
+    },
+    {
+      "id": "toonshift-export-day",
+      "title": "Grid export",
+      "description": "Recorded grid export over the last 24 hours",
+      "release": "1.0.0",
+      "source": "file",
+      "artifact": {
+        "path": "plugins/toonshift-export-day.json",
+        "sha256": "1b0ef9f5387bd523b384e7d4acdbab92e6985762f9c2b2c104ba80642b1635dd"
+      },
+      "title_nl": "Teruglevering"
     }
   ]
 }

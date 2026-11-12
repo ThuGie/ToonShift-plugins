@@ -1,0 +1,9 @@
+{
+  "id": "toonshift-gas-day",
+  "title": "Gas in 24 hours",
+  "description": "Recorded gas consumption over the last 24 hours",
+  "release": "1.0.0",
+  "source": "meter_archive",
+  "meter": "gas",
+  "title_nl": "Gas in 24 uur"
+}

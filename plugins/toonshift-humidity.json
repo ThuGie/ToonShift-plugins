@@ -1,0 +1,8 @@
+{
+  "id": "toonshift-humidity",
+  "title": "Humidity",
+  "description": "Compensated room humidity from the thermostat",
+  "source": "box_talk",
+  "metric": "room_humidity",
+  "release": "1.0.0"
+}

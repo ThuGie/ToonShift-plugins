@@ -1,0 +1,8 @@
+{
+  "id": "toonshift-gas",
+  "title": "Gas usage",
+  "description": "Live gas flow from the Toon meter adapter",
+  "source": "box_talk",
+  "metric": "gas",
+  "release": "1.0.0"
+}

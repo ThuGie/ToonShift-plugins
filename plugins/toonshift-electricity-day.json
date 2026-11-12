@@ -1,0 +1,9 @@
+{
+  "id": "toonshift-electricity-day",
+  "title": "Electricity in 24 hours",
+  "description": "Recorded electricity consumption over the last 24 hours",
+  "release": "1.0.0",
+  "source": "meter_archive",
+  "meter": "electricity",
+  "title_nl": "Stroom in 24 uur"
+}

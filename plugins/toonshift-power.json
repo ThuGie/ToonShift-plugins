@@ -1,0 +1,8 @@
+{
+  "id": "toonshift-power",
+  "title": "Electricity",
+  "description": "Live electricity from the Toon meter adapter",
+  "source": "box_talk",
+  "metric": "electricity",
+  "release": "1.0.0"
+}

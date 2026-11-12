@@ -1,0 +1,67 @@
+{
+  "id": "toonshift-air-quality",
+  "title": "Outdoor air quality",
+  "description": "European air-quality index from Open-Meteo",
+  "release": "1.0.0",
+  "source": "https_json",
+  "feed": {
+    "url": "https://air-quality-api.open-meteo.com/v1/air-quality?latitude={latitude}&longitude={longitude}&current=european_aqi",
+    "value": "/current/european_aqi",
+    "suffix": " AQI",
+    "decimals": 0,
+    "places": [
+      {
+        "latitude": 52.37,
+        "longitude": 4.9,
+        "name": "Amsterdam"
+      },
+      {
+        "latitude": 51.92,
+        "longitude": 4.48,
+        "name": "Rotterdam"
+      },
+      {
+        "latitude": 52.09,
+        "longitude": 5.12,
+        "name": "Utrecht"
+      },
+      {
+        "latitude": 52.08,
+        "longitude": 4.31,
+        "name": "The Hague"
+      },
+      {
+        "latitude": 51.44,
+        "longitude": 5.48,
+        "name": "Eindhoven"
+      },
+      {
+        "latitude": 53.22,
+        "longitude": 6.57,
+        "name": "Groningen"
+      },
+      {
+        "latitude": 50.85,
+        "longitude": 5.69,
+        "name": "Maastricht"
+      },
+      {
+        "latitude": 51.84,
+        "longitude": 5.86,
+        "name": "Nijmegen"
+      }
+    ],
+    "search": {
+      "url": "https://geocoding-api.open-meteo.com/v1/search?name={query}&count=5&language={language}&format=json",
+      "results": "/results",
+      "name": "/name",
+      "latitude": "/latitude",
+      "longitude": "/longitude",
+      "region": [
+        "/admin1",
+        "/country"
+      ]
+    }
+  },
+  "title_nl": "Luchtkwaliteit buiten"
+}
