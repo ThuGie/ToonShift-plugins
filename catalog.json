@@ -21,7 +21,8 @@
       "id": "toonshift-solar",
       "title": "Solar output",
       "description": "Live solar production from a local collector",
-      "source": "file"
+      "source": "file",
+      "release": "1.0.0"
     },
     {
       "id": "toonshift-humidity",
