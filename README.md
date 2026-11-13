@@ -23,3 +23,7 @@ Use ToonShift's `scripts/sync-plugin-repo.ps1` with the repository name and full
 These are ToonShift manifests. ReToon-apps uses a separate JavaScript runtime. Its PowerFlow and Weather apps informed the meter and weather widgets here.
 
 Weather data is provided by [Open-Meteo](https://open-meteo.com/).
+
+## Executable example
+
+Room summary ships as a WebAssembly plugin. Its code is in `source/room-summary.wat`. Compile with `wat2wasm`, hex-encode the resulting module into the package's `wasm` field, and regenerate the package hash in `catalog.json`. The host ABI is documented in ToonShift's plugin guide.

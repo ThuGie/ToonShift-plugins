@@ -128,6 +128,17 @@
         "sha256": "1b0ef9f5387bd523b384e7d4acdbab92e6985762f9c2b2c104ba80642b1635dd"
       },
       "title_nl": "Teruglevering"
+    },
+    {
+      "id": "toonshift-room-summary",
+      "title": "Room summary",
+      "description": "Programmable room temperature tile rendered by WebAssembly",
+      "release": "1.0.0",
+      "source": "file",
+      "artifact": {
+        "path": "plugins/toonshift-room-summary.json",
+        "sha256": "381dce963466c8879237ae31daf34c5dd8708bea9a4c06ce258f861d34301ac7"
+      }
     }
   ]
 }
