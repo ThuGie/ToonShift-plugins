@@ -49,11 +49,11 @@
       "id": "toonshift-weather",
       "title": "Weather",
       "description": "Live outdoor conditions from Open-Meteo",
-      "release": "1.1.0",
+      "release": "1.2.0",
       "source": "file",
       "artifact": {
         "path": "plugins/toonshift-weather.json",
-        "sha256": "f5561dac40412e82a933d270a2847e11eadf2c8c829647eb000d6954910bcd05"
+        "sha256": "1bf8fb5fe10784cf8b62c9331752209380fc197c60dc53ebb56e98015d0d7e3c"
       },
       "title_nl": "Weer"
     },
