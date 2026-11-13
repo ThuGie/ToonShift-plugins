@@ -4,7 +4,7 @@ The public catalog for [ToonShift](https://github.com/ThuGie/ToonShift), a Rust 
 
 | Plugin | Source |
 | --- | --- |
-| Weather 1.1.0 | Current conditions and a five-day forecast. Tap the tile and choose **Change location**. Provider URLs, search, forecast fields, locations, and labels are in the package. |
+| Weather 1.2.0 | Current conditions and a five-day forecast. Tap the tile and choose **Change location**. The package includes executable forecast and search decoding. |
 | Outdoor air quality and Outdoor wind | Outdoor European AQI and wind speed for the location selected in each plugin. |
 | Room sensor | Compensated room temperature from the Toon thermostat service. |
 | Electricity in 24 hours, Gas in 24 hours, Grid export | Last 24 hours of recorded meter history. A reading depends on the corresponding firmware archive. |
@@ -13,6 +13,8 @@ The public catalog for [ToonShift](https://github.com/ThuGie/ToonShift), a Rust 
 | Solar | External collector. Publish a UTF-8 line such as `482 W` to `/mnt/data/toon-rust/values/toonshift-solar.txt`. |
 
 ## Publish a catalog
+
+Publish `catalog.sig` beside `catalog.json` in the same commit. The signature is 128 hexadecimal digits encoding a detached Ed25519 signature over the exact LF-terminated catalog bytes. With OpenSSL, run `openssl pkeyutl -sign -rawin -inkey /path/to/private.pem -in catalog.json -out catalog.sig.bin` and `xxd -p -c 64 catalog.sig.bin > catalog.sig`. Keep the private key outside Git. Distribute the raw Ed25519 public key independently so users can provision it before adding your source.
 
 Put a version 1 `catalog.json` at the root of a public GitHub repository. Each entry links to a separate JSON package under `plugins/` and records the SHA-256 of its exact Git blob. Match the ID and release in both files, increment the release when the package changes, and update the hash. Use globally unique IDs, such as `yourname-room-humidity`. Store **Refresh official** fetches the index. **Install** or **Update** downloads and verifies the selected package.
 
