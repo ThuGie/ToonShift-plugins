@@ -139,6 +139,30 @@
         "path": "plugins/toonshift-room-summary.json",
         "sha256": "381dce963466c8879237ae31daf34c5dd8708bea9a4c06ce258f861d34301ac7"
       }
+    },
+    {
+      "id": "toonshift-water-day",
+      "title": "Water in 24 hours",
+      "description": "Recorded water use over the last 24 hours",
+      "release": "1.0.0",
+      "source": "file",
+      "title_nl": "Water in 24 uur",
+      "artifact": {
+        "path": "plugins/toonshift-water-day.json",
+        "sha256": "ad2f20a6689b01cb3058161f06a5fb65c9b7a2928e0a252e1e42b34290aeed9f"
+      }
+    },
+    {
+      "id": "toonshift-solar-day",
+      "title": "Solar in 24 hours",
+      "description": "Recorded solar generation over the last 24 hours",
+      "release": "1.0.0",
+      "source": "file",
+      "title_nl": "Zonne-energie in 24 uur",
+      "artifact": {
+        "path": "plugins/toonshift-solar-day.json",
+        "sha256": "837ad725286b4b392937230cb2f79f51e53e1c7de66ededa53c59d5b38e0bafe"
+      }
     }
   ]
 }

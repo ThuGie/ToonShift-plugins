@@ -1,0 +1,9 @@
+{
+  "id": "toonshift-water-day",
+  "title": "Water in 24 hours",
+  "description": "Recorded water use over the last 24 hours",
+  "release": "1.0.0",
+  "source": "meter_archive",
+  "meter": "water",
+  "title_nl": "Water in 24 uur"
+}

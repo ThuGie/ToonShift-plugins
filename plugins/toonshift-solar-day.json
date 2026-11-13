@@ -1,0 +1,9 @@
+{
+  "id": "toonshift-solar-day",
+  "title": "Solar in 24 hours",
+  "description": "Recorded solar generation over the last 24 hours",
+  "release": "1.0.0",
+  "source": "meter_archive",
+  "meter": "solar",
+  "title_nl": "Zonne-energie in 24 uur"
+}

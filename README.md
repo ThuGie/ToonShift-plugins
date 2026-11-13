@@ -7,7 +7,7 @@ The public catalog for [ToonShift](https://github.com/ThuGie/ToonShift), a Rust 
 | Weather 1.2.0 | Current conditions and a five-day forecast. Tap the tile and choose **Change location**. The package includes executable forecast and search decoding. |
 | Outdoor air quality and Outdoor wind | Outdoor European AQI and wind speed for the location selected in each plugin. |
 | Room sensor | Compensated room temperature from the Toon thermostat service. |
-| Electricity in 24 hours, Gas in 24 hours, Grid export | Last 24 hours of recorded meter history. A reading depends on the corresponding firmware archive. |
+| Electricity in 24 hours, Gas in 24 hours, Grid export, Water in 24 hours, Solar in 24 hours | Recorded meter history for the last 24 hours. Each tile requires the corresponding firmware archive. Tap a tile to open its chart on compatible ToonShift builds. |
 | Humidity 1.0.0 | Compensated room humidity from the firmware's thermostat feed. |
 | Electricity and Gas 1.0.0 | Live readings from the firmware's meter adapter. They show **No meter data** until a compatible connected meter reports. |
 | Solar | External collector. Publish a UTF-8 line such as `482 W` to `/mnt/data/toon-rust/values/toonshift-solar.txt`. |
