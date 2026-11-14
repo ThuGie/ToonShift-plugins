@@ -199,6 +199,18 @@
         "path": "plugins/toonshift-standby-cost.json",
         "sha256": "fdf6a7fabad4bf8b1b7f64f6161e24ebb7dc961421c6f3bfd3a3ce10083b6ce8"
       }
+    },
+    {
+      "id": "toonshift-day-ahead",
+      "title": "Day-ahead electricity",
+      "title_nl": "Stroomprijzen",
+      "description": "Dutch spot price now and the cheapest upcoming intervals, excluding taxes and fees",
+      "release": "1.0.0",
+      "source": "file",
+      "artifact": {
+        "path": "plugins/toonshift-day-ahead.json",
+        "sha256": "81ada419e86ec1da116171310d6684d9acb75a4b3d0b8c8ed57db78a58672db8"
+      }
     }
   ]
 }

@@ -1,0 +1,15 @@
+{
+  "id": "toonshift-day-ahead",
+  "title": "Day-ahead electricity",
+  "title_nl": "Stroomprijzen",
+  "description": "Dutch spot price now and the cheapest upcoming intervals, excluding taxes and fees",
+  "release": "1.0.0",
+  "source": "interactive",
+  "https_hosts": [
+    "api.energy-charts.info"
+  ],
+  "module": {
+    "path": "modules/day-ahead-1.0.0.wasm",
+    "sha256": "bcfc0aa61aee00dd35accc27f96f5461445605a162abc3e81e014ba212e87b45"
+  }
+}
