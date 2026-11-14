@@ -187,6 +187,18 @@
         "path": "plugins/toonshift-tuya.json",
         "sha256": "2dceb5bb4c60c8e2cc40eff0021f9a2087ef7240ca9a89cddb57c3fab6b3117a"
       }
+    },
+    {
+      "id": "toonshift-standby-cost",
+      "title": "Standby cost",
+      "title_nl": "Stand-bykosten",
+      "description": "Estimate yearly electricity use and cost from standby power and your tariff",
+      "release": "1.0.0",
+      "source": "file",
+      "artifact": {
+        "path": "plugins/toonshift-standby-cost.json",
+        "sha256": "fdf6a7fabad4bf8b1b7f64f6161e24ebb7dc961421c6f3bfd3a3ce10083b6ce8"
+      }
     }
   ]
 }

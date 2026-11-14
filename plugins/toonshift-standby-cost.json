@@ -1,0 +1,12 @@
+{
+  "id": "toonshift-standby-cost",
+  "title": "Standby cost",
+  "title_nl": "Stand-bykosten",
+  "description": "Estimate yearly electricity use and cost from standby power and your tariff",
+  "release": "1.0.0",
+  "source": "interactive",
+  "module": {
+    "path": "modules/standby-cost-1.0.0.wasm",
+    "sha256": "6ccdff612b3ca30627e7bbc12565b84b0b13e5115f4be663ca2a8faa19627584"
+  }
+}
