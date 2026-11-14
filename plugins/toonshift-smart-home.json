@@ -1,0 +1,8 @@
+{
+  "id": "toonshift-smart-home",
+  "title": "Smart Home Controls",
+  "title_nl": "Slimme schakelaars",
+  "description": "Control selected Home Assistant switches, including Tuya and Smart Life",
+  "release": "1.0.0",
+  "source": "smart_home"
+}

@@ -163,6 +163,18 @@
         "path": "plugins/toonshift-solar-day.json",
         "sha256": "837ad725286b4b392937230cb2f79f51e53e1c7de66ededa53c59d5b38e0bafe"
       }
+    },
+    {
+      "id": "toonshift-smart-home",
+      "title": "Smart Home Controls",
+      "title_nl": "Slimme schakelaars",
+      "description": "Control selected Home Assistant switches, including Tuya and Smart Life",
+      "release": "1.0.0",
+      "source": "file",
+      "artifact": {
+        "path": "plugins/toonshift-smart-home.json",
+        "sha256": "4c37b7d7824d1fdab91ea2ac1310ab80a3ed546de30dd81caf7b8531aa0a88bc"
+      }
     }
   ]
 }
