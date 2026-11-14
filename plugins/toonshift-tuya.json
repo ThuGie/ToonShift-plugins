@@ -1,0 +1,20 @@
+{
+  "id": "toonshift-tuya",
+  "title": "Tuya / Smart Life",
+  "title_nl": "Tuya / Smart Life",
+  "description": "Discover and control Smart Life switches directly through Tuya Cloud",
+  "release": "1.1.0",
+  "https_hosts": [
+    "openapi.tuyaeu.com",
+    "openapi-weaz.tuyaeu.com",
+    "openapi.tuyaus.com",
+    "openapi-ueaz.tuyaus.com",
+    "openapi.tuyacn.com",
+    "openapi.tuyain.com"
+  ],
+  "source": "interactive",
+  "module": {
+    "path": "modules/tuya-1.1.0.wasm",
+    "sha256": "12a5635015a743f33eed1ab615ebb7a3ccaf6e0745de7e36b3cd2ae2e8dc2d8d"
+  }
+}

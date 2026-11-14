@@ -1,6 +1,7 @@
 use serde_json::{Value, json};
 use sha2::{Digest, Sha256};
 use std::cell::RefCell;
+mod screen;
 
 thread_local! {
     static INPUT: RefCell<[u8; 32770]> = const { RefCell::new([0; 32770]) };
@@ -16,8 +17,12 @@ pub extern "C" fn input_buffer() -> *mut u8 {
 pub extern "C" fn render(len: usize) -> u64 {
     let result = INPUT.with(|input| {
         let input = input.borrow();
-        let value = serde_json::from_slice(input.get(..len)?).ok()?;
-        handle(&value)
+        let value: Value = serde_json::from_slice(input.get(..len)?).ok()?;
+        if value["version"] == 1 {
+            screen::handle(&value)
+        } else {
+            handle(&value)
+        }
     });
     OUTPUT.with(|output| {
         let mut output = output.borrow_mut();

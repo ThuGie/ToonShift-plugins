@@ -1,8 +1,9 @@
 use serde_json::{Value, json};
 use std::cell::RefCell;
+mod screen;
 
 thread_local! {
-    static INPUT: RefCell<[u8; 512]> = const { RefCell::new([0; 512]) };
+    static INPUT: RefCell<[u8; 32770]> = const { RefCell::new([0; 32770]) };
     static OUTPUT: RefCell<Vec<u8>> = const { RefCell::new(Vec::new()) };
 }
 
@@ -15,8 +16,12 @@ pub extern "C" fn input_buffer() -> *mut u8 {
 pub extern "C" fn render(length: usize) -> u64 {
     let plan = INPUT.with(|input| {
         let input = input.borrow();
-        let value = serde_json::from_slice(input.get(..length)?).ok()?;
-        request(&value)
+        let value: Value = serde_json::from_slice(input.get(..length)?).ok()?;
+        if value["version"] == 1 {
+            screen::handle(&value)
+        } else {
+            request(&value)
+        }
     });
     OUTPUT.with(|output| {
         let mut output = output.borrow_mut();

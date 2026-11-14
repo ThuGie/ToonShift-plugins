@@ -4,7 +4,9 @@ The public catalog for [ToonShift](https://github.com/ThuGie/ToonShift), a Rust 
 
 | Plugin | Source |
 | --- | --- |
-| Weather 1.2.0 | Current conditions and a five-day forecast. Tap the tile and choose **Change location**. The package includes executable forecast and search decoding. |
+| Tuya / Smart Life 1.1.0 | Direct Tuya Cloud switch control with a touchscreen connection form. Use a linked Tuya Cloud project. |
+| Home Assistant 2.0.0 | Separate touchscreen plugin for switch discovery and state-verified control. Approve the server's HTTPS endpoint on the Toon. |
+| Weather 1.2.1 | Current conditions and a five-day forecast. Tap the tile and choose **Change location**. The package includes executable forecast and search decoding. |
 | Outdoor air quality and Outdoor wind | Outdoor European AQI and wind speed for the location selected in each plugin. |
 | Room sensor | Compensated room temperature from the Toon thermostat service. |
 | Electricity in 24 hours, Gas in 24 hours, Grid export, Water in 24 hours, Solar in 24 hours | Recorded meter history for the last 24 hours. Each tile requires the corresponding firmware archive. Tap a tile to open its chart on compatible ToonShift builds. |
@@ -34,3 +36,7 @@ Room Summary runs the binary in `modules/`. Compile `source/room-summary.wat` wi
 Weather 1.2 ships a Rust WebAssembly module. Its source in `source/weather` owns Open-Meteo forecast and location decoding and English and Dutch condition names. It needs a launcher with the executable HTTPS feed ABI.
 
 Run `rustup target add wasm32-unknown-unknown`, then build with `RUSTFLAGS="-C link-arg=-zstack-size=65536" cargo build --manifest-path source/weather/Cargo.toml --target wasm32-unknown-unknown --locked --release` in a POSIX shell. Place the resulting binary under `modules/`, update its path and SHA-256 in the package, and regenerate the package hash and catalog signature.
+
+## Interactive screens
+
+The Tuya and Home Assistant Rust crates define their own fields, button actions, and network protocols. Build them using the same WebAssembly target and stack size as Weather. See the [interactive screen ABI](https://github.com/ThuGie/ToonShift/blob/main/docs/plugins.md#interactive-screens-abi-version-1).

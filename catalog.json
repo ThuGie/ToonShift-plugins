@@ -166,14 +166,26 @@
     },
     {
       "id": "toonshift-smart-home",
-      "title": "Smart Home Controls",
-      "title_nl": "Slimme schakelaars",
-      "description": "Control selected Home Assistant switches, including Tuya and Smart Life",
-      "release": "1.1.0",
+      "title": "Home Assistant",
+      "title_nl": "Home Assistant",
+      "description": "Discover and control Home Assistant switches through your approved HTTPS endpoint",
+      "release": "2.0.0",
       "source": "file",
       "artifact": {
         "path": "plugins/toonshift-smart-home.json",
-        "sha256": "9ce21c1e39a9838d5457153c2d8b539417ae91c8f124cc28d9e6423fb0e41f30"
+        "sha256": "b315fc9c5b3fc554c4636676fb7b8fd266e0563cb1c1c06313435c0b15036616"
+      }
+    },
+    {
+      "id": "toonshift-tuya",
+      "title": "Tuya / Smart Life",
+      "title_nl": "Tuya / Smart Life",
+      "description": "Discover and control Smart Life switches directly through Tuya Cloud",
+      "release": "1.1.0",
+      "source": "file",
+      "artifact": {
+        "path": "plugins/toonshift-tuya.json",
+        "sha256": "2dceb5bb4c60c8e2cc40eff0021f9a2087ef7240ca9a89cddb57c3fab6b3117a"
       }
     }
   ]
