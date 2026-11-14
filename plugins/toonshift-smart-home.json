@@ -3,6 +3,10 @@
   "title": "Smart Home Controls",
   "title_nl": "Slimme schakelaars",
   "description": "Control selected Home Assistant switches, including Tuya and Smart Life",
-  "release": "1.0.0",
-  "source": "smart_home"
+  "release": "1.1.0",
+  "source": "smart_home",
+  "module": {
+    "path": "modules/home-assistant-1.1.0.wasm",
+    "sha256": "6912e90a9f18c2ea604c90c4208be1b80b8ec76815f63225c73c9af80c2cb9f5"
+  }
 }
