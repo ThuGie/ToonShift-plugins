@@ -49,11 +49,11 @@
       "id": "toonshift-weather",
       "title": "Weather",
       "description": "Live outdoor conditions from Open-Meteo",
-      "release": "1.2.0",
+      "release": "1.2.1",
       "source": "file",
       "artifact": {
         "path": "plugins/toonshift-weather.json",
-        "sha256": "1bf8fb5fe10784cf8b62c9331752209380fc197c60dc53ebb56e98015d0d7e3c"
+        "sha256": "3cd10153bdd6a087bc0a6ec12bc2d13d7966b7cc11894d69ff3a2adc17c86d2b"
       },
       "title_nl": "Weer"
     },
@@ -133,11 +133,11 @@
       "id": "toonshift-room-summary",
       "title": "Room summary",
       "description": "Programmable room temperature tile rendered by WebAssembly",
-      "release": "1.0.0",
+      "release": "1.0.1",
       "source": "file",
       "artifact": {
         "path": "plugins/toonshift-room-summary.json",
-        "sha256": "381dce963466c8879237ae31daf34c5dd8708bea9a4c06ce258f861d34301ac7"
+        "sha256": "60b37214d625e8f89cb40387e74f92befeeae797ed310ec6876d3864d0991e59"
       }
     },
     {

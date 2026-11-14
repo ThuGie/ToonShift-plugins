@@ -28,9 +28,9 @@ Weather data is provided by [Open-Meteo](https://open-meteo.com/).
 
 ## Executable example
 
-Room summary ships as a WebAssembly plugin. Its code is in `source/room-summary.wat`. Compile with `wat2wasm`, hex-encode the resulting module into the package's `wasm` field, and regenerate the package hash in `catalog.json`. The host ABI is documented in ToonShift's plugin guide.
+Room Summary runs the binary in `modules/`. Compile `source/room-summary.wat` with `wat2wasm`, update the module SHA-256 in the package, and regenerate the package hash and catalog signature. A ToonShift build with standalone module support is required for this release.
 # Building Weather
 
 Weather 1.2 ships a Rust WebAssembly module. Its source in `source/weather` owns Open-Meteo forecast and location decoding and English and Dutch condition names. It needs a launcher with the executable HTTPS feed ABI.
 
-Run `rustup target add wasm32-unknown-unknown`, then build with `RUSTFLAGS="-C link-arg=-zstack-size=65536" cargo build --manifest-path source/weather/Cargo.toml --target wasm32-unknown-unknown --locked --release` in a POSIX shell. Encode the resulting `toonshift_weather.wasm` as lowercase hexadecimal in the package's `wasm` field. Update the catalog SHA-256 using the final package bytes with LF line endings.
+Run `rustup target add wasm32-unknown-unknown`, then build with `RUSTFLAGS="-C link-arg=-zstack-size=65536" cargo build --manifest-path source/weather/Cargo.toml --target wasm32-unknown-unknown --locked --release` in a POSIX shell. Place the resulting binary under `modules/`, update its path and SHA-256 in the package, and regenerate the package hash and catalog signature.
