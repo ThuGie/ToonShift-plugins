@@ -211,6 +211,18 @@
         "path": "plugins/toonshift-day-ahead.json",
         "sha256": "81ada419e86ec1da116171310d6684d9acb75a4b3d0b8c8ed57db78a58672db8"
       }
+    },
+    {
+      "id": "toonshift-homewizard",
+      "title": "HomeWizard meters",
+      "title_nl": "HomeWizard-meters",
+      "description": "Read P1 power, electricity, gas and water or a USB-powered Watermeter via local API v1",
+      "release": "1.0.0",
+      "source": "file",
+      "artifact": {
+        "path": "plugins/toonshift-homewizard.json",
+        "sha256": "bda5633f5f79d3dd2ccb645f3f05696d73b62cffbccf0c06cf50cb29d81dc197"
+      }
     }
   ]
 }

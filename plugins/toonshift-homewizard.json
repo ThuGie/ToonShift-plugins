@@ -1,0 +1,13 @@
+{
+  "id": "toonshift-homewizard",
+  "title": "HomeWizard meters",
+  "title_nl": "HomeWizard-meters",
+  "description": "Read P1 power, electricity, gas and water or a USB-powered Watermeter via local API v1",
+  "release": "1.0.0",
+  "source": "interactive",
+  "lan_read_path": "/api/v1/data",
+  "module": {
+    "path": "modules/homewizard-meter-1.0.0.wasm",
+    "sha256": "1ed1a1092ef0b39c93363865dc475e00fd4cea4090a087e08662ad5f6aaa48fb"
+  }
+}
