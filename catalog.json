@@ -223,6 +223,18 @@
         "path": "plugins/toonshift-homewizard.json",
         "sha256": "bda5633f5f79d3dd2ccb645f3f05696d73b62cffbccf0c06cf50cb29d81dc197"
       }
+    },
+    {
+      "id": "toonshift-energy-flow",
+      "title": "Live energy flow",
+      "title_nl": "Live energiestroom",
+      "description": "Current Toon electricity and gas meter flow with reading age",
+      "release": "1.0.0",
+      "source": "file",
+      "artifact": {
+        "path": "plugins/toonshift-energy-flow.json",
+        "sha256": "cd8a1c67a327ac949940b7076307ed29e809698c4182bdcea517d64edaa1a147"
+      }
     }
   ]
 }

@@ -1,0 +1,16 @@
+{
+  "id": "toonshift-energy-flow",
+  "title": "Live energy flow",
+  "title_nl": "Live energiestroom",
+  "description": "Current Toon electricity and gas meter flow with reading age",
+  "release": "1.0.0",
+  "source": "interactive",
+  "telemetry": [
+    "electricity",
+    "gas"
+  ],
+  "module": {
+    "path": "modules/energy-flow-1.0.0.wasm",
+    "sha256": "1cf3784599219b4d3d38911f46bc4c79935da5fbfd0e4ca5888741291c8bcd58"
+  }
+}
