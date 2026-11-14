@@ -181,11 +181,11 @@
       "title": "Tuya / Smart Life",
       "title_nl": "Tuya / Smart Life",
       "description": "Discover and control Smart Life switches directly through Tuya Cloud",
-      "release": "1.1.0",
+      "release": "1.1.1",
       "source": "file",
       "artifact": {
         "path": "plugins/toonshift-tuya.json",
-        "sha256": "2dceb5bb4c60c8e2cc40eff0021f9a2087ef7240ca9a89cddb57c3fab6b3117a"
+        "sha256": "29f65c950448c86e0d8c8e37fbad80ae67c7d3121fc702960c1206ad73ae0146"
       }
     },
     {

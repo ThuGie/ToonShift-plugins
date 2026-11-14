@@ -5,7 +5,7 @@ pub(super) fn handle(input: &Value) -> Option<Value> {
     let action = input["action"].as_str()?;
     let previous = &input["state"];
     if action == "open" || action == "setup" {
-        return Some(if action == "open" && previous["config"].is_object() {
+        return Some(if action == "open" && valid_config(&previous["config"]) {
             page(previous.clone(), Value::Null, nl, "", false)
         } else {
             setup(previous, nl, "")
@@ -22,10 +22,7 @@ pub(super) fn handle(input: &Value) -> Option<Value> {
         if action == "connect" {
             state = json!({"config": input["fields"], "page": 1});
             let config = &state["config"];
-            if ["region", "client_id", "secret", "uid"]
-                .iter()
-                .any(|key| super::identifier(&config[key]).is_none())
-            {
+            if !valid_config(config) {
                 return Some(setup(
                     &state,
                     nl,
@@ -60,6 +57,18 @@ pub(super) fn handle(input: &Value) -> Option<Value> {
     }
 
     let response = &input["response"]["data"];
+    if response["code"] == 28841002 {
+        return Some(show_failure(
+            &state,
+            nl,
+            action,
+            if nl {
+                "Tuya Cloud-abonnement verlopen. Controleer Cloud Services."
+            } else {
+                "Tuya Cloud plan expired. Check Cloud Services in the Tuya portal."
+            },
+        ));
+    }
     match state["pending"].as_str()? {
         "token" => {
             let Some(token) =
@@ -108,6 +117,15 @@ pub(super) fn handle(input: &Value) -> Option<Value> {
     }
 }
 
+fn valid_config(config: &Value) -> bool {
+    matches!(
+        config["region"].as_str(),
+        Some("eu" | "we" | "us" | "ue" | "cn" | "in")
+    ) && ["client_id", "secret", "uid"]
+        .iter()
+        .all(|key| super::identifier(&config[key]).is_some())
+}
+
 fn setup(state: &Value, nl: bool, message: &str) -> Value {
     let config = &state["config"];
     json!({"screen": {
@@ -130,6 +148,10 @@ fn failed(state: &Value, nl: bool, action: &str) -> Value {
     } else {
         "Tuya could not confirm the request. Check your connection and permissions."
     };
+    show_failure(state, nl, action, message)
+}
+
+fn show_failure(state: &Value, nl: bool, action: &str, message: &str) -> Value {
     if action == "connect" {
         setup(state, nl, message)
     } else {

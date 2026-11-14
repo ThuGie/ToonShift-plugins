@@ -4,7 +4,7 @@ The public catalog for [ToonShift](https://github.com/ThuGie/ToonShift), a Rust 
 
 | Plugin | Source |
 | --- | --- |
-| Tuya / Smart Life 1.1.0 | Direct Tuya Cloud switch control with a touchscreen connection form. Use a linked Tuya Cloud project. |
+| Tuya / Smart Life 1.1.1 | Direct Tuya Cloud switch control with a touchscreen connection form. Use a linked Tuya Cloud project. |
 | Home Assistant 2.0.0 | Separate touchscreen plugin for switch discovery and state-verified control. Approve the server's HTTPS endpoint on the Toon. |
 | Standby cost 1.0.0 | Offline annual kWh and electricity cost estimate from watts, hours per day and your unit price. |
 | Day-ahead electricity 1.0.0 | Dutch spot price now and the cheapest available intervals over the next 24 hours. Prices exclude taxes and supplier fees. Data from [Energy-Charts.info](https://api.energy-charts.info/) and SMARD.de, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). |
