@@ -247,6 +247,17 @@
         "path": "plugins/toonshift-room-comfort.json",
         "sha256": "ff8f15acfd5cbac1ca96d8cb34573174f5c6bdc32365cabc26ead0b7d726f88d"
       }
+    },
+    {
+      "id": "toonshift-boiler-diagnostics",
+      "title": "Boiler Diagnostics",
+      "description": "Read-only boiler adapter, heat demand and OpenTherm status",
+      "release": "1.0.0",
+      "source": "file",
+      "artifact": {
+        "path": "plugins/toonshift-boiler-diagnostics.json",
+        "sha256": "f7c6262f4a00e99be216ba037e98da37e5f2d6cbc1cfe57296f5cd00936f86fd"
+      }
     }
   ]
 }

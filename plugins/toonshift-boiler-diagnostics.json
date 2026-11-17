@@ -1,0 +1,13 @@
+{
+  "id": "toonshift-boiler-diagnostics",
+  "title": "Boiler Diagnostics",
+  "description": "Read-only boiler adapter, heat demand and OpenTherm status",
+  "release": "1.0.0",
+  "title_nl": "Keteldiagnose",
+  "source": "interactive",
+  "boiler_diagnostics": true,
+  "module": {
+    "path": "modules/boiler-diagnostics-1.0.0.wasm",
+    "sha256": "2fe14da079d6a4f3e70d21764bcd01fe6b5665d26117a1ff3cc4e8d46e3adb83"
+  }
+}
