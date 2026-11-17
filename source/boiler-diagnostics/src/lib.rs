@@ -43,7 +43,7 @@ fn screen(event: &Value) -> Option<Value> {
     };
     let field = |id, label, value: String| {
         json!({
-            "id": id, "label": label, "value": value, "readonly": true
+            "id": id, "label": label, "value": format!("{label} · {value}"), "readonly": true
         })
     };
 
@@ -155,8 +155,8 @@ mod tests {
         .unwrap();
         let fields = result["screen"]["fields"].as_array().unwrap();
         assert_eq!(fields.len(), 3);
-        assert_eq!(fields[1]["value"], "Connected");
-        assert_eq!(fields[2]["value"], "Heating requested");
+        assert_eq!(fields[1]["value"], "Boiler adapter · Connected");
+        assert_eq!(fields[2]["value"], "Toon heat request · Heating requested");
     }
 
     #[test]
@@ -167,8 +167,8 @@ mod tests {
         }))
         .unwrap();
         let fields = result["screen"]["fields"].as_array().unwrap();
-        assert_eq!(fields[3]["value"], "Offline");
-        assert_eq!(fields[4]["value"], "Onbekend");
-        assert_eq!(fields[7]["value"], "75 °C");
+        assert_eq!(fields[3]["value"], "OpenTherm-verbinding · Offline");
+        assert_eq!(fields[4]["value"], "Brander · Onbekend");
+        assert_eq!(fields[7]["value"], "Ingestelde ketellimiet · 75 °C");
     }
 }
