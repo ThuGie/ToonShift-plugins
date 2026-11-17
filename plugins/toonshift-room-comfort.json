@@ -1,0 +1,16 @@
+{
+  "id": "toonshift-room-comfort",
+  "title": "Room Comfort",
+  "title_nl": "Wooncomfort",
+  "description": "Indoor humidity, temperature and estimated dew point",
+  "release": "1.0.0",
+  "source": "interactive",
+  "telemetry": [
+    "room_temperature",
+    "room_humidity"
+  ],
+  "module": {
+    "path": "modules/room-comfort-1.0.0.wasm",
+    "sha256": "cba43cccacfc5ae4fc25168510e3b59fac07ab3217e6b773939499bb29936f0c"
+  }
+}

@@ -10,6 +10,7 @@ The public catalog for [ToonShift](https://github.com/ThuGie/ToonShift), a Rust 
 | Day-ahead electricity 1.0.0 | Dutch spot price now and the cheapest available intervals over the next 24 hours. Prices exclude taxes and supplier fees. Data from [Energy-Charts.info](https://api.energy-charts.info/) and SMARD.de, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). |
 | HomeWizard meters 1.0.0 | Open the plugin, enter the meter’s private IPv4 address, approve the read endpoint, and tap **Read meter**. Requires local API v1 enabled in HomeWizard and USB power for a standalone Watermeter. Measurements use unencrypted local HTTP with no credentials. [Local measurement API](https://api-documentation.homewizard.com/docs/v1/measurement/) |
 | Live energy flow 1.0.0 | Current signed electricity flow and gas flow, with reading age. Uses ToonShift’s selected meter sources and updates while open. Requires a launcher with interactive telemetry support. |
+| Room Comfort 1.0.0 | Indoor temperature, relative humidity and estimated dew point from the Toon's sensors. Updates while open and needs no network permission. |
 | Weather 1.2.1 | Current conditions and a five-day forecast. Tap the tile and choose **Change location**. The package includes executable forecast and search decoding. |
 | Outdoor air quality and Outdoor wind | Outdoor European AQI and wind speed for the location selected in each plugin. |
 | Room sensor | Compensated room temperature from the Toon thermostat service. |
@@ -44,3 +45,5 @@ Run `rustup target add wasm32-unknown-unknown`, then build with `RUSTFLAGS="-C l
 ## Interactive screens
 
 The Tuya and Home Assistant Rust crates define their own fields, button actions, and network protocols. Build them using the same WebAssembly target and stack size as Weather. See the [interactive screen ABI](https://github.com/ThuGie/ToonShift/blob/main/docs/plugins.md#interactive-screens-abi-version-1).
+
+Room Comfort uses the same build settings. It estimates the surface temperature where condensation can start and uses indoor humidity ranges from the [EPA moisture guide](https://www.epa.gov/mold/brief-guide-mold-moisture-and-your-home). The calculation uses current room conditions. The Toon measures the air near its own sensors.
